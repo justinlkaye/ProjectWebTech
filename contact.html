@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLI - Contact</title>
+    <style>
+      body {
+        background-color: #c3c3c3;
+      }
+
+      #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: black;
+        position: fixed;
+        height: 40px;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #c3c3c3;
+      }
+
+      nav {
+        display: flex;
+      }
+
+      nav a {
+        margin: 0 10px;
+        text-transform: uppercase;
+        color: #c3c3c3;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      nav a:hover {
+        color: #e74c3c;
+      }
+
+      form {
+        margin: 100px auto;
+        max-width: 500px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 95%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        height: 150px;
+      }
+
+      input[type="submit"] {
+        background-color: #e74c3c;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #c0392b;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      li {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="logo">SLI</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resorts.html">Resorts</a>
+        <a href="lifts.html">Lifts</a>
+        <a href="contact.html">Contact</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
+    <div id="header">
+      <div class="logo">SLI</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resorts.html">Resorts</a>
+        <a href="lifts.html">Lifts</a>
+        <a href="contact.html">Contact</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
+    <div id="form-container">
+      <h1>Contact Us</h1>
+      <form action="" method="POST">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="subject">Subject:</label><br />
+        <input type="text" id="subject" name="subject" required /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" required></textarea><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>

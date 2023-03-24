@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLI - Lifts</title>
+    <style>
+      body {
+        background-color: #c3c3c3;
+      }
+      #header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: black;
+        position: fixed;
+        height: 40px;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #c3c3c3;
+      }
+      nav {
+        display: flex;
+      }
+
+      nav a {
+        margin: 0 10px;
+        text-transform: uppercase;
+        color: #c3c3c3;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      nav a:hover {
+        color: #e74c3c;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      li {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 20px;
+        margin-top: 100px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      .photo {
+        width: 100px;
+      }
+
+      .lift-name {
+        font-weight: bold;
+      }
+
+      .manufacturer {
+        font-style: italic;
+      }
+
+      .vertical-feet {
+        text-align: right;
+      }
+
+      .ride-time {
+        text-align: right;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="logo">SLI</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resorts.html">Resorts</a>
+        <a href="lifts.html">Lifts</a>
+        <a href="contact.html">Contact</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Lift Name</th>
+          <th>Manufacturer</th>
+          <th>Type of Lift</th>
+          <th>Vertical Feet</th>
+          <th>Ride Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="images/fourrunner.jpg" alt="FourRunner Quad" /></td>
+          <td>FourRunner Quad</td>
+          <td>Doppelmayr</td>
+          <td>High-Speed Quad</td>
+          <td>2,046</td>
+          <td>5.9 minutes</td>
+        </tr>
+        <tr>
+          <td><img src="images/skyeship.jpg" alt="Skyeship Gondola" /></td>
+          <td>Skyeship Gondola</td>
+          <td>Leitner-Poma</td>
+          <td>8 Person Gondola</td>
+          <td>2,522</td>
+          <td>10.8 minutes</td>
+        </tr>
+        <tr>
+          <td><img src="images/jupiter.jpg" alt="Jupiter Lift" /></td>
+          <td>Jupiter Lift</td>
+          <td>Doppelmayr</td>
+          <td>Fixed-Grip Double</td>
+          <td>1,000</td>
+          <td>6.6 minutes</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
