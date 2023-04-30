@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SLI - Sitemap</title>
+    <title>SLI - Resorts</title>
     <style>
       body {
         background-color: #c3c3c3;
@@ -45,7 +45,11 @@
         color: #e74c3c;
       }
 
-      h1,h2,h3,p,li{
+      h1,
+      h2,
+      h3,
+      p,
+      li {
         font-family: Arial, Helvetica, sans-serif;
       }
 
@@ -53,17 +57,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 100px;
+        margin: 100px auto;
+
         width: 80%;
         max-width: 1200px;
       }
       .resort {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin: 50px 0;
+        margin: 50px auto;
         width: 80%;
         max-width: 800px;
+        border-width: 30px;
+        border-radius: 50px;
+        border-color: gray;
+        border-style: solid;
+        background-color: gray;
       }
 
       .resort img {
@@ -102,6 +113,7 @@
         margin-bottom: 10px;
       }
     </style>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
     <div id="header">
@@ -199,37 +211,39 @@
       </div>
       <div class="resort">
         <img src="images/stowe.jpg" alt="Stowe Resort" />
-        <h2>Stowe Mountain Resort</h2>
-        <ul>
+        <div class="info">
+          <h2>Stowe Mountain Resort</h2>
+          <ul>
             <li>Number of Trails: 116</li>
             <li>Trail Mix: 16% Green, 59% Blue, 25% Black</li>
             <li>Skiable Acres: 485</li>
             <li>Lifts: 13</li>
           </ul>
-        <p>
-          Located in Stowe, Vermont, Stowe Mountain Resort is a premier ski and
-          snowboarding destination. With 116 trails spread across 485 skiable
-          acres, there is something for everyone. The trail mix is 16% beginner,
-          55% intermediate, and 29% advanced, so both novice and experienced
-          skiers and snowboarders can enjoy the mountain. The resort also boasts
-          12 lifts, including a gondola, 3 high-speed quads, and a new six-pack, providing easy
-          access to the slopes.
-        </p>
-        <h3>Tips:</h3>
-        <ul>
-          <li>
-            Arrive early to get a good parking spot in the Mansfield lot, which
-            is closest to the gondola.
-          </li>
-          <li>
-            Take the gondola to the top of Mount Mansfield for some of the best
-            views on the mountain.
-          </li>
-          <li>
-            For a challenging run, try Liftline, a double-black diamond trail
-            that runs from the top of the gondola down to the base.
-          </li>
-        </ul>
+          <p>
+            Located in Stowe, Vermont, Stowe Mountain Resort is a premier ski
+            and snowboarding destination. With 116 trails spread across 485
+            skiable acres, there is something for everyone. The trail mix is 16%
+            beginner, 55% intermediate, and 29% advanced, so both novice and
+            experienced skiers and snowboarders can enjoy the mountain. The
+            resort also boasts 12 lifts, including a gondola, 3 high-speed
+            quads, and a new six-pack, providing easy access to the slopes.
+          </p>
+          <h3>Tips:</h3>
+          <ul>
+            <li>
+              Arrive early to get a good parking spot in the Mansfield lot,
+              which is closest to the gondola.
+            </li>
+            <li>
+              Take the gondola to the top of Mount Mansfield for some of the
+              best views on the mountain.
+            </li>
+            <li>
+              For a challenging run, try Liftline, a double-black diamond trail
+              that runs from the top of the gondola down to the base.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>

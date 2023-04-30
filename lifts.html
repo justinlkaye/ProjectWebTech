@@ -103,9 +103,64 @@
         max-width: 100%;
         height: auto;
       }
+
+      .ski-lift {
+        position: relative;
+        height: 200px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .cable {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background-color: gray;
+      }
+
+      /*ChatGPT Assistance with positioning the gondola (cabin and hanger) and cable*/
+      .gondola {
+        position: absolute;
+        top: 74%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 50px;
+        width: 50px;
+      }
+
+      .cabin {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(0, 0, 80);
+        z-index: 3;
+      }
+
+      .hanger {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+        width: 10px;
+        background-color: gray;
+        z-index: 2;
+      }
     </style>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
+    <div class="ski-lift">
+      <div class="cable"></div>
+      <div class="gondola">
+        <div class="cabin"></div>
+        <div class="hanger"></div>
+      </div>
+    </div>
     <div id="header">
       <div class="logo">SLI</div>
       <nav>
@@ -121,6 +176,7 @@
         <tr>
           <th>Photo</th>
           <th>Lift Name</th>
+          <th>Mountain</th>
           <th>Manufacturer</th>
           <th>Type of Lift</th>
           <th>Vertical Feet</th>
@@ -131,6 +187,7 @@
         <tr>
           <td><img src="images/fourrunner.jpg" alt="FourRunner Quad" /></td>
           <td>FourRunner Quad</td>
+          <td>Stowe</td>
           <td>Doppelmayr</td>
           <td>High-Speed Quad</td>
           <td>2,046</td>
@@ -139,6 +196,7 @@
         <tr>
           <td><img src="images/skyeship.jpg" alt="Skyeship Gondola" /></td>
           <td>Skyeship Gondola</td>
+          <td>Killington</td>
           <td>Leitner-Poma</td>
           <td>8 Person Gondola</td>
           <td>2,522</td>
@@ -147,12 +205,51 @@
         <tr>
           <td><img src="images/jupiter.jpg" alt="Jupiter Lift" /></td>
           <td>Jupiter Lift</td>
+          <td>Park City</td>
           <td>Doppelmayr</td>
           <td>Fixed-Grip Double</td>
           <td>1,000</td>
           <td>6.6 minutes</td>
         </tr>
+        <tr>
+          <td><img src="images/jordan.jpg" alt="Jordan 8" /></td>
+          <td>Jordan 8</td>
+          <td>Sunday River</td>
+          <td>Doppelmayr</td>
+          <td>Bubble High Speed Eight</td>
+          <td>1,325</td>
+          <td>4 minutes</td>
+        </tr>
       </tbody>
     </table>
+    <script>
+      const gondola = document.querySelector(".gondola");
+      const cabin = document.querySelector(".cabin");
+      const hanger = document.querySelector(".hanger");
+      let direction = "right";
+
+      //ChatGPT assistance to create/debug this function
+      function moveGondola() {
+        const currentPosition = parseInt(gondola.style.left || 0);
+        if (direction === "right") {
+          if (currentPosition >= 280) {
+            direction = "left";
+          } else {
+            gondola.style.left = `${currentPosition + 1}px`;
+            cabin.style.left = `${currentPosition + 1}px`;
+          }
+        } else {
+          if (currentPosition <= 0) {
+            direction = "right";
+          } else {
+            gondola.style.left = `${currentPosition - 1}px`;
+            cabin.style.left = `${currentPosition - 1}px`;
+          }
+        }
+        hanger.style.left = `${currentPosition + 25}px`;
+      }
+
+      setInterval(moveGondola, 40);
+    </script>
   </body>
 </html>
